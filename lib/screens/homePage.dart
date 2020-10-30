@@ -27,7 +27,7 @@ class HomePageState extends State<HomePage> {
       drawer: NavDrawer(),
       appBar: AppBar(
         title: Text(
-          'Welcome Urban Dwellwer',
+          'Welcome Urban Dweller',
           style: TextStyle(
             fontSize: 20,
             fontStyle: FontStyle.italic,
@@ -95,106 +95,99 @@ class HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              Card(
-                margin: EdgeInsets.fromLTRB(15, 0, 15, 15),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                elevation: 8.0,
-                shadowColor: Colors.black,
-                color: Colors.green[100],
-                child: Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    '1) Clean your home trash',
-                    style: TextStyle(
-                        fontStyle: FontStyle.normal,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.black),
-                    textAlign: TextAlign.center,
+              FlatButton(
+                onPressed: () {
+                  bookingsNotifier.currentBookings = null;
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (BuildContext context) {
+                      return BookingsForm(
+                        isUpdating: false,
+                      );
+                    }),
+                  );
+                },
+                child: Card(
+                  margin: EdgeInsets.fromLTRB(15, 0, 15, 15),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  elevation: 8.0,
+                  shadowColor: Colors.black,
+                  color: Colors.green[100],
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Text(
+                      '1) Clean your home trash',
+                      style: TextStyle(
+                          fontStyle: FontStyle.normal,
+                          fontSize: 20,
+                          color: Colors.black),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               ),
-              Card(
-                margin: EdgeInsets.fromLTRB(15, 0, 15, 15),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                elevation: 8.0,
-                shadowColor: Colors.black,
-                color: Colors.green[100],
-                child: Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    '2) Clean your water tank  ',
-                    style: TextStyle(
-                        fontStyle: FontStyle.normal,
-                        fontSize: 20,
-                        color: Colors.black),
-                    textAlign: TextAlign.center,
+              FlatButton(
+                onPressed: () {
+                  bookingsNotifier.currentBookings = null;
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (BuildContext context) {
+                      return BookingsForm(
+                        isUpdating: false,
+                      );
+                    }),
+                  );
+                },
+                child: Card(
+                  margin: EdgeInsets.fromLTRB(15, 0, 15, 15),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  elevation: 8.0,
+                  shadowColor: Colors.black,
+                  color: Colors.green[100],
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Text(
+                      '2) Clean your water tank  ',
+                      style: TextStyle(
+                          fontStyle: FontStyle.normal,
+                          fontSize: 20,
+                          color: Colors.black),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               ),
-              /*Card(
-                margin: EdgeInsets.fromLTRB(15, 0, 15, 15),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                elevation: 8.0,
-                shadowColor: Colors.black,
-                color: Colors.green[100],
-                child: Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    '3) Clean Toilet(upcoming)',
-                    style: TextStyle(
-                        fontStyle: FontStyle.normal,
-                        fontSize: 20,
-                        color: Colors.black),
-                    textAlign: TextAlign.center,
+              FlatButton(
+                onPressed: () {
+                  bookingsNotifier.currentBookings = null;
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (BuildContext context) {
+                      return BookingsForm(
+                        isUpdating: false,
+                      );
+                    }),
+                  );
+                },
+                child: Card(
+                  margin: EdgeInsets.fromLTRB(15, 0, 15, 15),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                ),
-              ),*/
-              Card(
-                margin: EdgeInsets.fromLTRB(15, 0, 15, 15),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                elevation: 8.0,
-                shadowColor: Colors.black,
-                color: Colors.green[100],
-                child: Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    '3) Clean your Household  ',
-                    style: TextStyle(
-                        fontStyle: FontStyle.normal,
-                        fontSize: 20,
-                        color: Colors.black),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 50,
-              ),
-              Card(
-                margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                color: Colors.green[100],
-                child: Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    'Click the \"+" icon to go to the booking page',
-                    style: TextStyle(
-                        fontStyle: FontStyle.normal,
-                        fontSize: 25,
-                        fontWeight: FontWeight.w200,
-                        color: Colors.black),
-                    textAlign: TextAlign.center,
+                  elevation: 8.0,
+                  shadowColor: Colors.black,
+                  color: Colors.green[100],
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Text(
+                      '3) Clean your Household  ',
+                      style: TextStyle(
+                          fontStyle: FontStyle.normal,
+                          fontSize: 20,
+                          color: Colors.black),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               ),
