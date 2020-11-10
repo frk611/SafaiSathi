@@ -192,25 +192,32 @@ class HomePageState extends State<HomePage> {
                 ),
               ),
               SizedBox(
-                height: 150,
+                height: 15,
+              ),
+              Card(
+                margin: EdgeInsets.fromLTRB(15, 20, 15, 20),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                color: Colors.green[100],
+                child: Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    'Kindly after going to the booking page type one from the given services',
+                    style: TextStyle(
+                        fontStyle: FontStyle.normal,
+                        fontSize: 25,
+                        fontWeight: FontWeight.w200),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 100,
               ),
             ],
           ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          bookingsNotifier.currentBookings = null;
-          Navigator.of(context).push(
-            MaterialPageRoute(builder: (BuildContext context) {
-              return BookingsForm(
-                isUpdating: false,
-              );
-            }),
-          );
-        },
-        child: Icon(Icons.add),
-        foregroundColor: Colors.white,
       ),
     );
   }

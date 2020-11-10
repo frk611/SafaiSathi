@@ -31,7 +31,7 @@ class _ProfilePageState extends State<ProfilePage> {
             fontStyle: FontStyle.italic,
           ),
         ),
-        actions: <Widget>[
+        /*actions: <Widget>[
           // action button
           FlatButton(
             shape:
@@ -52,7 +52,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   color: Colors.black),
             ),
           ),
-        ],
+        ],*/
         backgroundColor: Colors.green,
       ),
       body: Container(

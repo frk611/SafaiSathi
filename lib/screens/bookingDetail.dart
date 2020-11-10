@@ -129,14 +129,14 @@ class BookingsDetail extends StatelessWidget {
             foregroundColor: Colors.white,
           ),
           SizedBox(height: 20),
-          FloatingActionButton(
+          /*FloatingActionButton(
             heroTag: 'button2',
             onPressed: () => deleteBookings(
                 bookingsNotifier.currentBookings, _onBookingsDeleted),
             child: Icon(Icons.delete),
             backgroundColor: Colors.red,
             foregroundColor: Colors.white,
-          ),
+          ),*/
         ],
       ),
     );

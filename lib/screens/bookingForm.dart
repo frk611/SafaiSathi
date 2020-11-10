@@ -311,6 +311,8 @@ class _BookingsFormState extends State<BookingsForm> {
                       _buildSubingredientField(),
                       ButtonTheme(
                         child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30)),
                           child: Text('Add',
                               style: TextStyle(color: Colors.white)),
                           onPressed: () =>
@@ -356,7 +358,7 @@ class _BookingsFormState extends State<BookingsForm> {
           FocusScope.of(context).requestFocus(new FocusNode());
           _saveBookings();
         },
-        child: Icon(Icons.save),
+        child: Text('Save'),
         foregroundColor: Colors.white,
       ),
     );

@@ -127,7 +127,7 @@ class UsefulLinks extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         color: Colors.black),
                     text:
-                        "Mail us: efg.2k20@gmail.com \n \n Visit our website: www.efgindia.in\n\nPoke us on our Facebook page: https://www.facebook.com/EFG-Environment-for-Future-Generation-111191320480361\n\nFollow our Twitter handle: https://twitter.com/EFG_2k20?s=09 \n \n Subscribe to our YouTube channel: https://www.youtube.com/channel/UCOK7n0Q0t_qmWlX45qoB0GA",
+                        "Mail us: efg.2k20@gmail.com \n \n Visit our website: www.efgindia.in\n\nPoke us on our Facebook page: https://www.facebook.com/EFG-Environment-for-Future-Generation-111191320480361\n\nFollow our Twitter handle: https://twitter.com/efg_envs_2k20 \n \n Subscribe to our YouTube channel: https://www.youtube.com/channel/UCOK7n0Q0t_qmWlX45qoB0GA",
                   ),
                 ),
               ),
