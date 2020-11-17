@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:SafaiSathi/model/booking.dart';
+import 'package:SafaiSathi/notifier/authNotifier.dart';
 import 'package:SafaiSathi/notifier/bookingNotifier.dart';
 import 'package:SafaiSathi/services.dart';
 import 'package:flutter/material.dart';
@@ -113,45 +114,38 @@ class _BookingsFormState extends State<BookingsForm> {
   }
 
   Widget _buildNameField() {
+    AuthNotifier authNotifier = Provider.of<AuthNotifier>(context);
     return TextFormField(
       decoration: InputDecoration(labelText: 'Display name'),
-      initialValue: _currentBookings.name,
-      keyboardType: TextInputType.text,
-      style: TextStyle(fontSize: 20),
-      validator: (String value) {
-        if (value.isEmpty) {
-          return 'Name is required';
-        }
-
-        if (value.length < 3 || value.length > 20) {
-          return 'Please enter your display name';
-        }
-
-        return null;
-      },
+      initialValue: (authNotifier.user != null
+          ? authNotifier.user.displayName
+          : "Urban Dweller"),
+      style: TextStyle(
+        color: Colors.black,
+        fontSize: 20,
+        fontStyle: FontStyle.normal,
+      ),
       onSaved: (String value) {
         _currentBookings.name = value;
       },
     );
   }
 
+//Test field
   Widget _buildTypeField() {
-    return TextFormField(
-      decoration: InputDecoration(labelText: 'Service Type'),
-      initialValue: _currentBookings.type,
-      keyboardType: TextInputType.text,
-      style: TextStyle(fontSize: 20),
-      validator: (String value) {
-        if (value.isEmpty) {
-          return 'This is required';
-        }
-
-        if (value.length < 8 || value.length > 30) {
-          return 'Choose from the given services';
-        }
-
-        return null;
-      },
+    return DropdownButtonFormField(
+      hint: Text('Confirm your choice of service'),
+      items: <String>[
+        'Clean your home trash',
+        'Clean your water tank',
+        'Clean your household',
+      ].map((String value) {
+        return new DropdownMenuItem<String>(
+          value: value,
+          child: new Text(value),
+        );
+      }).toList(),
+      onChanged: (_) {},
       onSaved: (String value) {
         _currentBookings.type = value;
       },
@@ -358,7 +352,7 @@ class _BookingsFormState extends State<BookingsForm> {
           FocusScope.of(context).requestFocus(new FocusNode());
           _saveBookings();
         },
-        child: Text('Save'),
+        child: Text('Book'),
         foregroundColor: Colors.white,
       ),
     );

@@ -185,24 +185,8 @@ class _LoginState extends State<Login> {
                       : Container(),
                   SizedBox(height: 32),
                   ButtonTheme(
-                    minWidth: 200,
-                    child: RaisedButton(
-                      padding: EdgeInsets.all(10.0),
-                      child: Text(
-                        'Switch to ${_authMode == AuthMode.Login ? 'Signup' : 'Login'}',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          _authMode = _authMode == AuthMode.Login
-                              ? AuthMode.Signup
-                              : AuthMode.Login;
-                        });
-                      },
-                    ),
-                  ),
-                  SizedBox(height: 16),
-                  ButtonTheme(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30)),
                     minWidth: 200,
                     child: RaisedButton(
                       padding: EdgeInsets.all(10.0),
@@ -215,6 +199,29 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    height: 180,
+                  ),
+                  ButtonTheme(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30)),
+                    child: RaisedButton(
+                      padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                      child: Text(
+                        'Are you ${_authMode == AuthMode.Login ? ' a new user? then click here to go to the signup page' : ' an old user? then click here to go to the login page'}',
+                        style: TextStyle(fontSize: 10, color: Colors.white),
+                        textAlign: TextAlign.center,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _authMode = _authMode == AuthMode.Login
+                              ? AuthMode.Signup
+                              : AuthMode.Login;
+                        });
+                      },
+                    ),
+                  ),
+                  SizedBox(height: 16),
                 ],
               ),
             ),

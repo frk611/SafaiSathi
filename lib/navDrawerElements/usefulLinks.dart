@@ -118,7 +118,7 @@ class UsefulLinks extends StatelessWidget {
                 ),
                 color: Colors.green[100],
                 child: Padding(
-                  padding: EdgeInsets.all(10),
+                  padding: EdgeInsets.all(20),
                   child: Linkable(
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -132,7 +132,7 @@ class UsefulLinks extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 100,
+                height: 80,
               ),
             ],
           ),

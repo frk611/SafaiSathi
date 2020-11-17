@@ -203,7 +203,7 @@ class HomePageState extends State<HomePage> {
                 child: Padding(
                   padding: EdgeInsets.all(10),
                   child: Text(
-                    'Kindly after going to the booking page type one from the given services',
+                    'Kindly after going to the booking page, reconfirm your desired service.',
                     style: TextStyle(
                         fontStyle: FontStyle.normal,
                         fontSize: 25,
