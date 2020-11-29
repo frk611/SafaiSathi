@@ -22,7 +22,7 @@ login(User user, AuthNotifier authNotifier) async {
     FirebaseUser firebaseUser = authResult.user;
 
     if (firebaseUser != null) {
-      print("Log In: $firebaseUser");
+      //print("Log In: $firebaseUser");
       authNotifier.setUser(firebaseUser);
     }
     /*else {
@@ -65,7 +65,7 @@ signup(User user, AuthNotifier authNotifier) async {
 
       await firebaseUser.reload();
 
-      print("Sign up: $firebaseUser");
+      //print("Sign up: $firebaseUser");
 
       FirebaseUser currentUser = await FirebaseAuth.instance.currentUser();
       authNotifier.setUser(currentUser);

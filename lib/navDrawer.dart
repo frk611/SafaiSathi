@@ -3,6 +3,7 @@ import 'package:SafaiSathi/navDrawerElements/pendingBookings.dart';
 import 'package:SafaiSathi/navDrawerElements/profilePage.dart';
 import 'package:SafaiSathi/navDrawerElements/trashRate.dart';
 import 'package:SafaiSathi/navDrawerElements/usefulLinks.dart';
+import 'package:SafaiSathi/screens/pop-Up-One_Unauthorized.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -183,7 +184,10 @@ class DrawerState extends State<NavDrawer> {
               new MaterialPageRoute(
                   builder: (BuildContext context) => new Feed()));
         } else {
-          SnackBar(content: Text("Not Authorized"));
+          Navigator.of(context).push(
+            MaterialPageRoute(
+                builder: (BuildContext context) => UNauthorized()),
+          );
         }
       });
   }

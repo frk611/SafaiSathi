@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "695191377622",
+    "firebase_url": "https://safaisathi-d1dff.firebaseio.com",
+    "project_id": "safaisathi-d1dff",
+    "storage_bucket": "safaisathi-d1dff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695191377622:android:e582c3402b30440096db77",
+        "android_client_info": {
+          "package_name": "com.efg.SafaiSathi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "695191377622-q2br6nbje0jfad5g2jnksi7gk7v4c2of.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsYFvpzyltHO3yVL47BqWYB2UP67GZZHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "695191377622-q2br6nbje0jfad5g2jnksi7gk7v4c2of.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

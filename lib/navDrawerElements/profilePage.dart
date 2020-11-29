@@ -33,7 +33,7 @@ class _ProfilePageState extends State<ProfilePage> {
         ),
         actions: <Widget>[
           // action button
-          FlatButton(
+          /*FlatButton(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             color: Colors.green[100],
@@ -51,7 +51,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   fontWeight: FontWeight.w400,
                   color: Colors.black),
             ),
-          ),
+          ),*/
         ],
         backgroundColor: Colors.green,
       ),
