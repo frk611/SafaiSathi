@@ -64,7 +64,7 @@ class _LoginState extends State<Login> {
           return 'Display Name is required';
         }
 
-        if (value.length < 5 || value.length > 12) {
+        if (value.length < 3 || value.length > 30) {
           return 'Display Name must be betweem 5 and 12 characters';
         }
 
@@ -83,7 +83,7 @@ class _LoginState extends State<Login> {
         labelStyle: TextStyle(color: Colors.green),
       ),
       keyboardType: TextInputType.emailAddress,
-      initialValue: 'faruqueaziz@gmail.com',
+      initialValue: 'example@gmail.com',
       style: TextStyle(fontSize: 26, color: Colors.green),
       cursorColor: Colors.white,
       validator: (String value) {
